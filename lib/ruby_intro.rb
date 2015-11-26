@@ -92,6 +92,14 @@ class BookInStock
       raise ArgumentError, "price can't be less than or equal 0" if price <= 0
       @isbn, @price = isbn, price
   end
+
+  def isbn
+      @isbn
+  end
+  def price
+      @price
+  end
+
   def price_as_string
       return "$" + ('%.2f' %price)
   end
