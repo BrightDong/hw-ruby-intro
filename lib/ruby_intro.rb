@@ -87,4 +87,13 @@ end
 
 class BookInStock
 # YOUR CODE HERE
+  def initialize(isbn, price)
+      raise ArgumentError, "ISBN is null" if isbn.length == 0
+      raise ArgumentError, "price can't be less than or equal 0" if price <= 0
+      @isbn, @price = isbn, price
+  end
+  def price_as_string
+      return "$" + ('%.2f' %price)
+  end
 end
+
