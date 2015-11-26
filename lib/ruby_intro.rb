@@ -75,7 +75,7 @@ end
 def binary_multiple_of_4? s
   # YOUR CODE HERE
   return false if s.length < 2
-  if s[/^01*/] == nil && (s[-1][/0/]!= nil && s[-2][/0/] != nil)
+  if s[/[^01]*/] == "" && (s[-1][/[0]/]!= nil && s[-2][/[0]/] != nil)
       return true
   else
       return false
