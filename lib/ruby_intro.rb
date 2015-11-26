@@ -93,11 +93,15 @@ class BookInStock
       @isbn, @price = isbn, price
   end
 
-  def isbn
-      @isbn
+  def isbn; @isbn; end
+  def price; @price; end
+
+  def isbn=(value)
+      @isbn = value
   end
-  def price
-      @price
+
+  def price=(value)
+      @price = value
   end
 
   def price_as_string
